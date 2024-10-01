@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    
+   
+   
+}
+/* Header and navigation styling */
+#header {
+    background-image: url('img/img3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    position: relative;
+   
+    
+}
+nav {
+    width: 100%;
+    background-color: rgba(10, 8, 8, 0.6); /* Semi-transparent background for navbar */
+    padding-top:  10px;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #9fdb13;
+    text-decoration: none;
+}
+
+#sp1 {
+    color: #9fdb13; /* Highlight color for 'Folio' */
+}
+.nav-link.active {
+    color: #fff !important; /* Set color to white */
+}
+.navbar-nav .nav-link {
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #ca0cdb;
+}
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+.header-text {
+    margin-top: 50px;
+    text-align: center;
+}
+.navbar-brand h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 600;
+    margin: 0 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.nav-link.active {
+    color: #fff !important; /* Set color to white */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ca0cdb;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Header Text */
+.header-text {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-text .spn1 {
+    color: white;
+}
+
+.header-text span {
+    color: #4d67ff;
+    font-weight: bold;
+}
+
+
+/* Box container styling */
+.box-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    padding-top: 20px;
+    gap: 20px; /* Add some space between boxes */
+    padding-left: 60px;
+}
+
+/* General box styling */
+.box {
+    background-color: #f8ef72;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    background-color: #e9dd8e; /* Slightly brighter background on hover */
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: #0d6efd;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.4s ease;
+    z-index: 0;
+    opacity: 0.1;
+    border-radius: 50%; /* Make the overlay a circle */
+}
+
+.box h3.degree {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
